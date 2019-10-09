@@ -4,8 +4,12 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 
-files = ["_data/csc_test_1.txt", "_data/csc_test_2.txt", "_data/csc_test_3.txt"]
+
+files = ["_data/sta_test_1.txt", "_data/sta_test_2.txt"]
+# files = ["_data/csc_test_1.txt", "_data/csc_test_2.txt", "_data/csc_test_3.txt"]
 COLOURS = ['#EC204F', '#FF922C', '#FEED47', '#71CFBD', '#C7C69C', '#DFDEB3']
+SHOULD_SAVE = True
+
 NUM_BINS = 20
 hundies = []
 titles = []
@@ -22,10 +26,8 @@ for i, file in enumerate(files):
         titles.append(first_line[1].strip())
         tests.append([])
         for line in textfile:
-            # pp.pprint([question for question in line.strip().lower().split(",")[1:]])
             one_student = [float(question) for question in line.strip().lower().split(",")[1:] if len(question) > 0]
             tests[i].append(one_student)
-    # pp.pprint(tests[i])
     percentages.append([np.round(student[-1] / hundies[i] * 100.0, 1) for student in tests[i] if len(student) > 0])
     mu.append(np.mean(percentages[i]))
     sigma.append(np.std(percentages[i]))
@@ -50,18 +52,14 @@ padding = [0.2, 0.15]
 for i, test in enumerate(tests):
     x_pos.append([(mu[i] - sigma[i]) / 100.0, (mu[i] + sigma[i]) / 100.0])
     y_pos.append([0.95 - padding[1] * i, 0.96 - padding[1] * i])
-    # plt.text(
-    #     mu[i]+sigma[i],
-    #     height * y_pos[i][1] * 1.01,
-    #     r"{} $\mu={}$, $\sigma={}$".format(titles[i], np.round(mu[i], 2), np.round(sigma[i], 2)))
-
     plt.axvline(mu[i], y_pos[i][0], y_pos[i][1], color=COLOURS[i], ls='-')
     plt.axhspan(y_pos[i][0] * height, y_pos[i][1] * height, x_pos[i][0], x_pos[i][1],
                 color=COLOURS[i % len(COLOURS)], ls='-', alpha=0.6)
 
 plt.title(" \nvs ".join(titles), fontsize=10)
 plt.grid(axis='y', alpha=0.5)
-legend_items = [r"{} $\mu={}$, $\sigma={}$".format(titles[i], np.round(mu[i], 2), np.round(sigma[i], 2)) for i in range(len(tests))]
+legend_items = [r"{} $\mu={}$, $\sigma={}$".format(titles[i], np.round(mu[i], 2), np.round(sigma[i], 2)) for i in
+                range(len(tests))]
 
 params = {'legend.fontsize': 6,
           'legend.handlelength': 1}
@@ -71,5 +69,7 @@ plt.xlabel('Mark')
 plt.ylabel('Frequency')
 plt.tight_layout()
 
-# plt.show(dpi=400)
-plt.savefig("marks_graph", dpi=400)
+if SHOULD_SAVE:
+    plt.savefig("_vs_".join([title.replace(" ", "_") for title in titles]), dpi=400)
+else:
+    plt.show(dpi=400)

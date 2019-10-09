@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6a656f3-306f-4cac-8b1f-d8ea0f1c32c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/READ_ME.md" afterDir="false" />
+    <list default="true" id="b6a656f3-306f-4cac-8b1f-d8ea0f1c32c3" name="Default Changelist" comment="Added Graph to git">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STA1006S Test 1&#10; vs STA1006S Test 2 Marks&#10;.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/STA1006S Test 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/STA1006S Test 2 Marks.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/analyse_marks.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyse_marks.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,21 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analyse_marks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="705">
+              <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/READ_ME.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="30">
-                <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+                <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
               </first_editor>
               <second_editor />
             </state>
@@ -39,17 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_data/csc_test_3.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_data/csc_test_1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="240">
+              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -175,12 +167,14 @@
         <option value="$PROJECT_DIR$/_data/csc_test_1.txt" />
         <option value="$PROJECT_DIR$/marks.py" />
         <option value="$PROJECT_DIR$/organise_downloads.py" />
-        <option value="$PROJECT_DIR$/analyse_marks.py" />
         <option value="$PROJECT_DIR$/READ_ME.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/analyse_marks.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="228" />
     <option name="y" value="23" />
     <option name="width" value="1100" />
     <option name="height" value="877" />
@@ -340,7 +334,7 @@
       <workItem from="1570171849040" duration="386000" />
       <workItem from="1570175790133" duration="1929000" />
       <workItem from="1570611148780" duration="2100000" />
-      <workItem from="1570613653747" duration="242000" />
+      <workItem from="1570613653747" duration="895000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1570612568796</created>
@@ -363,22 +357,42 @@
       <option name="project" value="LOCAL" />
       <updated>1570613714496</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Readme.md">
+      <created>1570613905846</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570613905846</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated README.md with demo graph">
+      <created>1570614077771</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570614077771</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Graph to git">
+      <created>1570614137307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570614137307</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29571000" />
+    <option name="totallyTimeSpent" value="30224000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="997" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1100" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49582636" visible="true" weight="0.19790576" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49582636" visible="true" weight="0.17863894" />
       <window_info id="Structure" order="1" sideWeight="0.50417364" side_tool="true" weight="0.0937053" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41910827" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21656051" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4554217" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -404,7 +418,10 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="Made the plotting fit a bit better" />
     <MESSAGE value="Included a demo plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Included a demo plot" />
+    <MESSAGE value="Added Readme.md" />
+    <MESSAGE value="Updated README.md with demo graph" />
+    <MESSAGE value="Added Graph to git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Graph to git" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -416,7 +433,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CellularAutomata$main.coverage" NAME="main Coverage Results" MODIFIED="1568967980541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CellularAutomata$marks.coverage" NAME="marks Coverage Results" MODIFIED="1570612806510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MarksAnalysis$analyse_marks.coverage" NAME="analyse_marks Coverage Results" MODIFIED="1570614041644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MarksAnalysis$analyse_marks.coverage" NAME="analyse_marks Coverage Results" MODIFIED="1570614867386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MarksAnalysis$MarksAnalysis.coverage" NAME="MarksAnalysis Coverage Results" MODIFIED="1570612836114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
   </component>
   <component name="debuggerHistoryManager">
@@ -510,13 +527,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ vs  vs .png" />
-    <entry file="file://$PROJECT_DIR$/_data/csc_test_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_data/csc_test_1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -572,20 +582,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analyse_marks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CSC1016S Test 1_vs_CSC1016S Test 2_vs_CSC1016S Test 3.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/READ_ME.md">
+    <entry file="file://$PROJECT_DIR$/marks_graph.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="30">
-            <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_data/csc_test_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/STA1006S Test 1&#10; vs STA1006S Test 2 Marks&#10;.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/STA1006S Test 1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/STA1006S Test 2 Marks.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse_marks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
         </state>
       </provider>
     </entry>

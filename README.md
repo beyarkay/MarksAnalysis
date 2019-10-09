@@ -27,3 +27,6 @@
 # Example Output: 
 
 ![Alt Text](marks_graph.png)
+
+
+![Alt Text](STA1006S_Test_1_vs_STA1006S_Test_2_Marks.png)
