@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# files = ["_data/sta_test_1.txt", "_data/sta_test_2.txt"]
-files = ["_data/csc_test_1.txt", "_data/csc_test_2.txt", "_data/csc_test_3.txt"]
+files = ["_data/sta_test_1.txt", "_data/sta_test_2.txt"]
+# files = ["_data/csc_test_1.txt", "_data/csc_test_2.txt", "_data/csc_test_3.txt"]
 COLOURS = ['#EC204F', '#FF922C', '#FEED47', '#71CFBD', '#C7C69C', '#DFDEB3']
 SHOULD_SAVE = True
 
