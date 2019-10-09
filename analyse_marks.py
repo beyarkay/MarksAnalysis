@@ -19,7 +19,7 @@ for i, file in enumerate(files):
     with open(file, "r") as textfile:
         first_line = textfile.readline().split(",")
         hundies.append(float(first_line[0]))
-        titles.append(first_line[1])
+        titles.append(first_line[1].strip())
         tests.append([])
         for line in textfile:
             # pp.pprint([question for question in line.strip().lower().split(",")[1:]])
