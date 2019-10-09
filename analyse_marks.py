@@ -59,7 +59,7 @@ for i, test in enumerate(tests):
     plt.axhspan(y_pos[i][0] * height, y_pos[i][1] * height, x_pos[i][0], x_pos[i][1],
                 color=COLOURS[i % len(COLOURS)], ls='-', alpha=0.6)
 
-plt.title(" vs ".join(titles), fontsize=10)
+plt.title(" \nvs ".join(titles), fontsize=10)
 plt.grid(axis='y', alpha=0.5)
 legend_items = [r"{} $\mu={}$, $\sigma={}$".format(titles[i], np.round(mu[i], 2), np.round(sigma[i], 2)) for i in range(len(tests))]
 
@@ -72,4 +72,4 @@ plt.ylabel('Frequency')
 plt.tight_layout()
 
 # plt.show(dpi=400)
-plt.savefig(" vs ".join(titles), dpi=400)
+plt.savefig("marks_graph", dpi=400)
