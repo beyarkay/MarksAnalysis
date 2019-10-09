@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-files = ["_data/sta_test_1.txt", "_data/sta_test_2.txt"]
-# files = ["_data/csc_test_1.txt", "_data/csc_test_2.txt", "_data/csc_test_3.txt"]
+# files = ["_data/sta_test_1.txt", "_data/sta_test_2.txt"]
+files = ["_data/csc_test_1.txt", "_data/csc_test_2.txt", "_data/csc_test_3.txt"]
 COLOURS = ['#EC204F', '#FF922C', '#FEED47', '#71CFBD', '#C7C69C', '#DFDEB3']
 SHOULD_SAVE = True
 
@@ -48,13 +48,18 @@ maxfreq = np.max(n)
 height = np.ceil(maxfreq / 10) * 10 if maxfreq % 10 else maxfreq + 10
 plt.ylim(ymax=height)
 
-padding = [0.2, 0.15]
+padding = [0, 0.025]
 for i, test in enumerate(tests):
     x_pos.append([(mu[i] - sigma[i]) / 100.0, (mu[i] + sigma[i]) / 100.0])
     y_pos.append([0.95 - padding[1] * i, 0.96 - padding[1] * i])
     plt.axvline(mu[i], y_pos[i][0], y_pos[i][1], color=COLOURS[i], ls='-')
-    plt.axhspan(y_pos[i][0] * height, y_pos[i][1] * height, x_pos[i][0], x_pos[i][1],
-                color=COLOURS[i % len(COLOURS)], ls='-', alpha=0.6)
+    plt.axhspan(y_pos[i][0] * height,
+                y_pos[i][1] * height,
+                x_pos[i][0],
+                x_pos[i][1],
+                color=COLOURS[i % len(COLOURS)],
+                ls='-',
+                alpha=0.6)
 
 plt.title(" \nvs ".join(titles), fontsize=10)
 plt.grid(axis='y', alpha=0.5)
@@ -64,7 +69,8 @@ legend_items = [r"{} $\mu={}$, $\sigma={}$".format(titles[i], np.round(mu[i], 2)
 params = {'legend.fontsize': 6,
           'legend.handlelength': 1}
 plt.rcParams.update(params)
-plt.legend(legend_items)
+plt.legend(legend_items, loc='best').get_frame().set_alpha(0.5)
+
 plt.xlabel('Mark')
 plt.ylabel('Frequency')
 plt.tight_layout()

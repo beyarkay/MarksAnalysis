@@ -26,7 +26,10 @@
 
 # Example Output: 
 
-![Alt Text](marks_graph.png)
+![Alt Text](CSC1016S_Test_1_vs_CSC1016S_Test_2_vs_CSC1016S_Test_3.png)
 
 
 ![Alt Text](STA1006S_Test_1_vs_STA1006S_Test_2_Marks.png)
+
+
+Last Update: 9 October 2019
