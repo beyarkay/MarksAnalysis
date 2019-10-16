@@ -4,9 +4,14 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 
+# files = ["_data/sta_class_mark.txt",
+#          "_data/sta_test1.txt",
+#          "_data/sta_test2.txt",
+#          "_data/sta_assignment_average.txt"]
 
-files = ["_data/sta_test_1.txt", "_data/sta_test_2.txt"]
-# files = ["_data/csc_test_1.txt", "_data/csc_test_2.txt", "_data/csc_test_3.txt"]
+files = ["_data/csc_test_1.txt",
+         "_data/csc_test_2.txt",
+         "_data/csc_test_3.txt"]
 COLOURS = ['#EC204F', '#FF922C', '#FEED47', '#71CFBD', '#C7C69C', '#DFDEB3']
 SHOULD_SAVE = True
 
@@ -17,28 +22,41 @@ percentages = []
 tests = []
 mu = []
 sigma = []
+num = []
+PERCENTILE_VALUES = [25, 50, 75]
+percentiles = []
 
 for i, file in enumerate(files):
     pp.pprint("Opening: " + file)
     with open(file, "r") as textfile:
         first_line = textfile.readline().split(",")
-        hundies.append(float(first_line[0]))
-        titles.append(first_line[1].strip())
+        if len(first_line[0]) < 200:  # check to see that the file is formatted properly
+            hundies.append(float(first_line[0]))
+            titles.append(first_line[1].strip())
+        else:
+            raise Exception("The first line should contain a title and total, but instead it contains: '{}'".format(
+                ",".join(first_line)))
+
         tests.append([])
         for line in textfile:
             one_student = [float(question) for question in line.strip().lower().split(",")[1:] if len(question) > 0]
             tests[i].append(one_student)
     percentages.append([np.round(student[-1] / hundies[i] * 100.0, 1) for student in tests[i] if len(student) > 0])
-    mu.append(np.mean(percentages[i]))
-    sigma.append(np.std(percentages[i]))
-pp.pprint(percentages)
+    mu.append(
+        np.round(np.mean(percentages[i]), 2))
+    sigma.append(
+        np.round(np.std(percentages[i]), 2))
+    num.append(len(percentages[i]))
+    percentiles.append([])
+    for j, percentile in enumerate(PERCENTILE_VALUES):
+        percentiles[-1].append(np.percentile(percentages[i], percentile))
+
 
 n, bins, patches = plt.hist(x=percentages,
                             bins=NUM_BINS,
                             color=COLOURS[:len(percentages)],
                             alpha=0.7,
                             rwidth=0.85)
-
 plt.xticks(bins, range(0, 100 + 1, 100 // NUM_BINS))
 
 x_pos = []
@@ -63,8 +81,41 @@ for i, test in enumerate(tests):
 
 plt.title(" \nvs ".join(titles), fontsize=10)
 plt.grid(axis='y', alpha=0.5)
-legend_items = [r"{} $\mu={}$, $\sigma={}$".format(titles[i], np.round(mu[i], 2), np.round(sigma[i], 2)) for i in
-                range(len(tests))]
+# legend_items = [r"{} $\mu={}$, $\sigma={}$, n={}".format(titles[i], np.round(mu[i], 2), np.round(sigma[i], 2), num[i])
+#                 for i in
+#                 range(len(tests))]
+legend_items = [r"{}, n={}".format(titles[i], num[i]) for i in range(len(tests))]
+
+table_data = [mu,
+              sigma,
+              [percentiles[i][0] for i in range(len(mu))],
+              [percentiles[i][1] for i in range(len(mu))],
+              [percentiles[i][2] for i in range(len(mu))],
+              num]
+pp.pprint(table_data)
+
+table_data_T = [*zip(*table_data)]
+row_labels = titles
+col_labels = ["μ", "σ", "25th", "50th", "75th", "n"]
+colours = COLOURS[:len(titles)]
+
+the_table = plt.table(cellText=table_data_T,
+                      rowLabels=row_labels,
+                      colLabels=col_labels,
+                      rowColours=colours,
+                      bbox=[0.3, -0.5, 0.35, 0.3])
+
+# description = "\n".join(
+#     ["{}: \n\t$μ={}$, \n\t$σ={}$, \n\t$n={}$".format(
+#         titles[i],
+#         np.round(mu[i], 2),
+#         np.round(sigma[i], 2),
+#         num[i]) for i in
+#         range(len(tests))]
+# )
+#
+#
+# plt.figtext(0.0, -0.5, description)
 
 params = {'legend.fontsize': 6,
           'legend.handlelength': 1}
@@ -76,6 +127,6 @@ plt.ylabel('Frequency')
 plt.tight_layout()
 
 if SHOULD_SAVE:
-    plt.savefig("_vs_".join([title.replace(" ", "_") for title in titles]), dpi=400)
+    plt.savefig("_vs_".join([title.replace(" ", "_") for title in titles]), dpi=400, bbox_inches='tight')
 else:
     plt.show(dpi=400)

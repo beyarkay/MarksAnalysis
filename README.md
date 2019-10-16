@@ -26,6 +26,8 @@
 
 # Example Output: 
 
+![Alt Text](STA_Class_Mark_vs_STA_Test_1_vs_STA_Test_2_vs_STA_Assignment_Average.png)
+
 ![Alt Text](CSC1016S_Test_1_vs_CSC1016S_Test_2_vs_CSC1016S_Test_3.png)
 
 
