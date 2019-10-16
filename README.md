@@ -1,6 +1,7 @@
 # Marks Analysis
 
-* Source files should be in _data/
+* Source files should be in `_data/`
+* Resultant graphs will go into `graphs/`
 * Source files should be formatted like so:
   * first line has the test total, followed by the name used for the legend. These are separated by a comma
   * the remaining lines have: an id number/string, the marks for sub-questions, the total mark for that student. These are separated by commas
@@ -10,7 +11,7 @@
 ```
 31,CSC1016S Test 3
 1231234,,19
-1231235,,13
+1231235,,13.5
 1231236,,11
 1231264,,10
 1231254,,24.5
@@ -26,12 +27,12 @@
 
 # Example Output: 
 
-![Alt Text](STA_Class_Mark_vs_STA_Test_1_vs_STA_Test_2_vs_STA_Assignment_Average.png)
+![Alt Text](graphs/STA_Test_1_vs_STA_Test_2_vs_STA_Assignment_Average_vs_STA_Class_Mark.png)
 
-![Alt Text](CSC1016S_Test_1_vs_CSC1016S_Test_2_vs_CSC1016S_Test_3.png)
+![Alt Text](graphs/CSC1016S_Test_1_vs_CSC1016S_Test_2_vs_CSC1016S_Test_3.png)
 
 
-![Alt Text](STA1006S_Test_1_vs_STA1006S_Test_2_Marks.png)
+![Alt Text](graphs/STA1006S_Test_1_vs_STA1006S_Test_2.png)
 
 
 Last Update: 9 October 2019

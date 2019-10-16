@@ -2,8 +2,8 @@ import os
 
 READFILE = "_data/sta_dp.txt"
 ASSIGNMENT = "_data/sta_assignment_average.txt"
-TEST1 = "_data/sta_test1.txt"
-TEST2 = "_data/sta_test2.txt"
+TEST1 = "_data/sta_test_1_dp_list.txt"
+TEST2 = "_data/sta_test_2_dp_list.txt"
 CLASS_MARK = "_data/sta_class_mark.txt"
 
 if os.path.exists(ASSIGNMENT):

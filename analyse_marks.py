@@ -1,17 +1,25 @@
 import pprint as pp
-import random
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-# files = ["_data/sta_class_mark.txt",
-#          "_data/sta_test1.txt",
-#          "_data/sta_test2.txt",
-#          "_data/sta_assignment_average.txt"]
+# files = ["_data/sta_test_1_dp_list.txt",
+#          "_data/sta_test_2_dp_list.txt",
+#          "_data/sta_assignment_average.txt",
+#          "_data/sta_class_mark.txt"]
 
-files = ["_data/csc_test_1.txt",
-         "_data/csc_test_2.txt",
-         "_data/csc_test_3.txt"]
+# files = ["_data/csc_test_1.txt",
+#          "_data/csc_test_2.txt",
+#          "_data/csc_test_3.txt"]
+
+# files = ["_data/sta_test_1.txt",
+#          "_data/sta_test_2.txt"]
+
+# files = ["_data/sta_test_1.txt",
+#          "_data/sta_test_1_dp_list.txt"]
+
+files = ["_data/sta_test_2.txt",
+         "_data/sta_test_2_dp_list.txt"]
 COLOURS = ['#EC204F', '#FF922C', '#FEED47', '#71CFBD', '#C7C69C', '#DFDEB3']
 SHOULD_SAVE = True
 
@@ -50,7 +58,6 @@ for i, file in enumerate(files):
     percentiles.append([])
     for j, percentile in enumerate(PERCENTILE_VALUES):
         percentiles[-1].append(np.percentile(percentages[i], percentile))
-
 
 n, bins, patches = plt.hist(x=percentages,
                             bins=NUM_BINS,
@@ -127,6 +134,8 @@ plt.ylabel('Frequency')
 plt.tight_layout()
 
 if SHOULD_SAVE:
-    plt.savefig("_vs_".join([title.replace(" ", "_") for title in titles]), dpi=400, bbox_inches='tight')
+
+    graph_title = "graphs/" + "_vs_".join([title.replace(" ", "_") for title in titles])
+    plt.savefig(graph_title, dpi=400, bbox_inches='tight')
 else:
     plt.show(dpi=400)
