@@ -1,52 +1,35 @@
 import os
 import glob
+import matplotlib.pyplot as plt
 
-"""
-Red
-#e6194B
-Green
-#3cb44b
-Yellow
-#ffe119
-Blue
-#4363d8
-Orange
-#f58231
-Purple
-#911eb4
-Cyan
-#42d4f4
-Magenta
-#f032e6
-Lime
-#bfef45
-Pink
-#fabebe
-Teal
-#469990
-Lavender
-#e6beff
-Brown
-#9A6324
-Beige
-#fffac8
-Maroon
-#800000
-Mint
-#aaffc3
-Olive
-#808000
-Apricot
-#ffd8b1
-Navy
-#000075
-Grey
-#a9a9a9
-White
-#ffffff
-Black
-#000000
-"""
+import numpy as np
+
+
+def draw_graph():
+    x1 = np.linspace(0.0, 5.0)
+    x2 = np.linspace(0.0, 2.0)
+    y1 = np.cos(2 * np.pi * x1) * np.exp(-x1)
+    y2 = np.cos(2 * np.pi * x2)
+
+    # Create two subplots sharing y axis
+    fig, (ax1, ax2) = plt.subplots(nrows=2, ncols=1)
+
+    # ax1.plot(x1, y1, 'ko-')
+    # Fixing random state for reproducibility
+    np.random.seed(19680801)
+
+    mu, sigma = 100, 15
+    x = mu + sigma * np.random.randn(10000)
+
+    # the histogram of the data
+    n, bins, patches = ax1.hist(x, 50, density=True, facecolor='g', alpha=0.75)
+
+    ax1.set(title='A tale of 2 subplots', ylabel='Damped oscillation')
+
+    ax2.plot(x2, y2, 'r.-')
+    ax2.set(xlabel='time (s)', ylabel='Undamped')
+
+    plt.show()
 
 
 def parse_csv():
@@ -121,4 +104,4 @@ def reformat_sta1006S_DP_list():
 
 
 if __name__ == '__main__':
-    parse_csv()
+    draw_graph()

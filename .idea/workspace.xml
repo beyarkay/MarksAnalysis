@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6a656f3-306f-4cac-8b1f-d8ea0f1c32c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_data/tabula-CSC1016S_Marksheet_2019.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/csc_test_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/csc_test_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/csc_test_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/csc_test_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/csc_test_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/csc_test_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/sta_assignment_average.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/sta_assignment_average.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/sta_class_mark.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/sta_class_mark.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/sta_dp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/sta_dp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/sta_test_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/sta_test_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/sta_test_1_dp_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/sta_test_1_dp_list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/sta_test_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/sta_test_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/sta_test_2_dp_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_data/sta_test_2_dp_list.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analyse_marks.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyse_marks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/CSC_Assignments.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/CSC_Assignments.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/CSC_Averages.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/CSC_Averages.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scratchpad.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratchpad.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +26,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>KNXBOY</find>
       <find>\.\n</find>
       <find>knxboy</find>
       <find>(?:\n(\d{2})\n)</find>
@@ -67,6 +55,7 @@
       <find>\t</find>
       <find>pprint</find>
       <find>tests</find>
+      <find>pp.pp</find>
     </findStrings>
     <replaceStrings>
       <replace>\n\t\t\t</replace>
@@ -125,8 +114,8 @@
         <option value="$PROJECT_DIR$/_data/tabula-CSC1016S_Marksheet_2019.csv" />
         <option value="$PROJECT_DIR$/_data/csc1016s_quizes.txt" />
         <option value="$PROJECT_DIR$/_data/csc1016s_assignments.txt" />
-        <option value="$PROJECT_DIR$/scratchpad.py" />
         <option value="$PROJECT_DIR$/_data/csc1016s_averages.txt" />
+        <option value="$PROJECT_DIR$/scratchpad.py" />
         <option value="$PROJECT_DIR$/analyse_marks.py" />
       </list>
     </option>
@@ -332,7 +321,7 @@
       <workItem from="1571385864866" duration="330000" />
       <workItem from="1571389622339" duration="2344000" />
       <workItem from="1571392027412" duration="4867000" />
-      <workItem from="1571408121071" duration="295000" />
+      <workItem from="1571408121071" duration="6869000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1570612568796</created>
@@ -411,21 +400,35 @@
       <option name="project" value="LOCAL" />
       <updated>1571246257337</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added more data, added capability for multiple data sets in one file">
+      <created>1571408417171</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571408417171</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Included more example graphs in graphs/">
+      <created>1571408552010</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571408552010</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45254000" />
+    <option name="totallyTimeSpent" value="51828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49582636" visible="true" weight="0.20529328" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49582636" visible="true" weight="0.14735337" />
       <window_info id="Structure" order="1" sideWeight="0.50417364" side_tool="true" weight="0.0937053" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15796179" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24968153" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45477706" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -439,7 +442,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.3902439" weight="0.20854701" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.3902439" weight="0.2932761" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" x="0" y="0" width="310" height="700" id="Documentation" order="5" sideWeight="0.6097561" side_tool="true" weight="0.34120172" />
     </layout>
@@ -460,7 +463,8 @@
     <MESSAGE value="Added more sample statistics, included more data" />
     <MESSAGE value="Fine tuning of the graphs and data" />
     <MESSAGE value="Added more data, added capability for multiple data sets in one file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more data, added capability for multiple data sets in one file" />
+    <MESSAGE value="Included more example graphs in graphs/" />
+    <option name="LAST_COMMIT_MESSAGE" value="Included more example graphs in graphs/" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -472,8 +476,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CellularAutomata$main.coverage" NAME="main Coverage Results" MODIFIED="1568967980541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CellularAutomata$marks.coverage" NAME="marks Coverage Results" MODIFIED="1570612806510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MarksAnalysis$scratchpad.coverage" NAME="scratchpad Coverage Results" MODIFIED="1571395267648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MarksAnalysis$analyse_marks.coverage" NAME="analyse_marks Coverage Results" MODIFIED="1571396829608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MarksAnalysis$scratchpad.coverage" NAME="scratchpad Coverage Results" MODIFIED="1571411570033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MarksAnalysis$analyse_marks.coverage" NAME="analyse_marks Coverage Results" MODIFIED="1571417119836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MarksAnalysis$MarksAnalysis.coverage" NAME="MarksAnalysis Coverage Results" MODIFIED="1570612836114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
   </component>
   <component name="debuggerHistoryManager">
@@ -580,13 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_data/csc_test_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -698,40 +695,8 @@
     <entry file="file://$PROJECT_DIR$/graphs/CSC1016S_Test_1_vs_CSC1016S_Test_2_vs_CSC1016S_Test_3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scratchpad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graphs/STA1006S_Test_2_FULL_vs_STA_Test_2_DP_List.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/CSC_Practical_Tests.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/CSC_Averages.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/CSC_Quizes.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/CSC_Assignments.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analyse_marks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_data/csc1016s_averages.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -740,10 +705,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_data/csc1016s_assignments.txt">
+    <entry file="file://$PROJECT_DIR$/_data/csc_test_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs/CSC_Practical_Tests.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs/CSC_Quizes.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs/CSC_Averages.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse_marks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <element signature="e#73#115#0" />
+            <element signature="e#631#669#0" />
+            <element signature="e#757#1032#0" />
+            <element signature="e#1316#1359#0" />
+            <element signature="e#1364#2736#0" />
+            <element signature="e#1398#2049#1" />
+            <element signature="e#1981#2892#0" />
+            <element signature="e#2065#2892#0" />
+            <element signature="e#2390#2892#0" />
+            <element signature="e#2580#2753#0" />
+            <element signature="e#2575#3186#0" />
+            <element signature="e#2570#2686#1" />
+            <element signature="e#3906#4476#0" />
+            <element signature="e#4284#4468#0" />
+            <element signature="e#4243#4718#0" />
+            <element signature="e#4281#4633#0" />
+            <element signature="e#5154#5869#0" />
+            <element signature="e#5347#5827#0" />
+            <element signature="e#6217#6458#0" />
+            <element signature="e#7431#7449#0" />
+            <element signature="e#7833#8017#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs/CSC_Assignments.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_data/csc1016s_assignments.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratchpad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="70" lean-forward="true" selection-start-line="26" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
