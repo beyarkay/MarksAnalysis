@@ -38,5 +38,9 @@ CSC1000S Test 1,35
 
 ![Alt Text](graphs/STA1006S_Test_1_vs_STA1006S_Test_2.png)
 
+# To Do: 
+* Add better explainations on the graphs for how many student's marks were found to be invalid and therefore omitted
+
+
 
 Last Update: 9 October 2019
