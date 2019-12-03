@@ -1,3 +1,4 @@
+import glob
 import pprint as pp
 
 import matplotlib.pyplot as plt
@@ -24,7 +25,10 @@ import numpy as np
 # file = "_data/csc1016s_assignments.txt"
 # file = "_data/csc1016s_averages.txt"
 # file = "_data/csc1016s_practical_tests.txt"
-file = "_data/csc1016s_quizes.txt"
+file = "_data/sll1074s_exam.txt"
+
+
+files = sorted(glob.glob("_data/*.txt"))
 
 COLOURS = ['#e6194B', '#f58231', '#ffe119', '#bfef45', '#3cb44b', '#42d4f4', '#4363d8',
            '#911eb4', '#f032e6', '#a9a9a9', '#800000', '#9A6324', '#808000', '#469990',
@@ -70,6 +74,8 @@ def parse_files(files):
                 if isfloat(line.split(DELIMITER)[-1].strip()):
                     mark = float(line.split(DELIMITER)[-1].strip())
                     percentages[i].append(np.round(mark / hundies[i] * 100.0, 2))
+                elif line.split(DELIMITER)[-1].strip() in ["DPR", "AB", "LOA"]:
+                    print("Ommitted: " + line)
                 else:
                     print(f"Couldn't parse this line'{line}', as isfloat('{line.split(',')[-1].strip()}') is false")
     grand_title = "\nvs ".join(titles)
@@ -100,11 +106,21 @@ def parse_file(file):
         percentages = [[] for _ in hundies]
 
         # Parse the body
+        ommitted = 0
         for line in textfile:
-            marks = [float(line.strip()) for line in line.split(DELIMITER)[1:]]
+            marks = []
+            if isfloat(line.split(DELIMITER)[-1].strip()):
+                marks = [float(line.strip()) for line in line.split(DELIMITER)[1:]]
+            elif line.split(DELIMITER)[-1].strip() in ["DPR", "AB", "LOA", "O", "INC", "DE"]:
+                print("Ommitted: " + line)
+                ommitted += 1
+            else:
+                print(f"Couldn't parse this line'{line}', as isfloat('{line.split(',')[-1].strip()}') is false")
+                ommitted += 1
+
             for i, mark in enumerate(marks):
                 percentages[i].append(np.round(mark / hundies[i] * 100.0, 2))
-
+    print(f"Ommitted: {ommitted}")
     return grand_title, titles, hundies, percentages
 
 
@@ -135,12 +151,21 @@ def plot_histogram(axes, percentages, num, num_bins, colours, titles, grand_titl
              rwidth=0.85,
              density=True,
              histtype='step',
-             cumulative=True)
+             cumulative=True,
+             range=(0, 100))
+
     ax3.legend(legend_items,
                loc='best',
                bbox_to_anchor=(1, 0.8),
                fontsize=6,
                handlelength=1).get_frame().set_alpha(0.5)
+    ax3.grid(axis='y', alpha=0.5)
+    ax3.set_title(f"Cumulative Mark Frequency\ngithub.com/beyarkay/MarksAnalysis", size=15)
+    ax3.set_ylabel("Percentile")
+    ax3.set_xlabel("Mark %")
+    ax3.set_yticks(np.linspace(0, 1, 11))
+    ax3.set_xticks(range(0, 101, 10))
+    ax3.set_xlim(0, 100)
 
 
 
@@ -150,9 +175,13 @@ def plot_histogram(axes, percentages, num, num_bins, colours, titles, grand_titl
                                  alpha=0.7,
                                  rwidth=0.85)
     ax1.set_xticks(bins, range(0, 100 + 1, 100 // num_bins))
-    ax1.set(title=grand_title,
-            ylabel='Frequency',
-            xlabel="Mark %")
+    # ax1.set(title=grand_title + f" - Source Code at github.com/beyarkay/MarksAnalysis",
+    #         ylabel='Frequency',
+    #         xlabel="Mark %")
+    ax1.set_title(f"{grand_title}\ngithub.com/beyarkay/MarksAnalysis", size=25)
+    ax1.set_ylabel("Frequency")
+    ax1.set_xlabel("Mark %")
+
     ax1.grid(axis='y', alpha=0.5)
     ax1.legend(legend_items,
                loc='best',
