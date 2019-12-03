@@ -1,4 +1,6 @@
-STA Assignment Average,100
+STA1006S Assignment Average 2019
+Peopleoft Number,Mark
+,100
 1708176,73
 1699512,85
 1507568,68

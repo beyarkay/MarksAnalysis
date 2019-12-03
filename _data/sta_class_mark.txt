@@ -1,4 +1,6 @@
-STA Class Mark,100
+STA1006S Class Mark 2019
+Peopleoft Number,Mark
+,100
 1708176,42
 1699512,53
 1507568,7

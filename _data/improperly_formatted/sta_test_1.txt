@@ -1,4 +1,6 @@
-STA1006S Test 1,50
+STA1006S Test 1 2019
+Peopleoft Number,Mark
+,50
 ___,19
 ___,17
 ___,38

@@ -27,8 +27,28 @@ import numpy as np
 # file = "_data/csc1016s_practical_tests.txt"
 file = "_data/sll1074s_exam.txt"
 
+files = [
+    # "_data/csc1016s_assignments.txt",
+    # "_data/csc1016s_averages.txt",
+    # "_data/csc1016s_exam.txt",
+    # "_data/csc1016s_practical_tests.txt",
+    # "_data/csc1016s_quizes.txt",
+    # "_data/csc3003s_exam_2019.txt",
+    # "_data/csc_test_1.txt",
+    # "_data/csc_test_2.txt",
+    # "_data/csc_test_3.txt",
+    # "_data/sll1074s_exam.txt",
+    # "_data/sta1006_exam.txt",
+    # "_data/sta_assignment_average.txt",
+    # "_data/sta_class_mark.txt",
+    # "_data/sta_dp.txt",
+    # "_data/sta_test_1.txt",
+    "_data/sta_test_1_dp_list.txt",
+    # "_data/sta_test_2.txt",
+    "_data/sta_test_2_dp_list.txt",
+]
 
-files = sorted(glob.glob("_data/*.txt"))
+# files = sorted(glob.glob("_data/*.txt"))
 
 COLOURS = ['#e6194B', '#f58231', '#ffe119', '#bfef45', '#3cb44b', '#42d4f4', '#4363d8',
            '#911eb4', '#f032e6', '#a9a9a9', '#800000', '#9A6324', '#808000', '#469990',
@@ -167,8 +187,6 @@ def plot_histogram(axes, percentages, num, num_bins, colours, titles, grand_titl
     ax3.set_xticks(range(0, 101, 10))
     ax3.set_xlim(0, 100)
 
-
-
     n, bins, patches = axes.hist(x=percentages,
                                  bins=num_bins,
                                  color=colours,
@@ -247,29 +265,32 @@ def plot_table(mu, sigma, percentiles, colours, titles):
 
 
 if __name__ == '__main__':
-    fig, (ax1, ax2, ax3) = plt.subplots(nrows=3, figsize=(10, 20))
 
-    grand_title, titles, hundies, percentages = parse_file(file)
 
-    mu, sigma, num, percentiles = calculate_statistics(percentages, PERCENTILE_VALUES)
+    for file in files:
+        fig, (ax1, ax2, ax3) = plt.subplots(nrows=3, figsize=(10, 20))
 
-    n = plot_histogram(ax1,
-                       percentages,
-                       num,
-                       NUM_BINS,
-                       COLOURS[:len(percentages)],
-                       titles,
-                       grand_title)
+        grand_title, titles, hundies, percentages = parse_file(file)
 
-    # plot_std_dev(ax1, n, percentages, mu, sigma, COLOURS)
+        mu, sigma, num, percentiles = calculate_statistics(percentages, PERCENTILE_VALUES)
 
-    plot_table(mu, sigma, percentiles, COLOURS[:len(mu)], titles)
+        n = plot_histogram(ax1,
+                           percentages,
+                           num,
+                           NUM_BINS,
+                           COLOURS[:len(percentages)],
+                           titles,
+                           grand_title)
 
-    plt.tight_layout()
+        # plot_std_dev(ax1, n, percentages, mu, sigma, COLOURS)
 
-    if SHOULD_SAVE:
-        graph_title = "graphs/" + grand_title.replace(" ", "_").replace("\n", "_")
-        plt.savefig(graph_title, dpi=400, bbox_inches='tight')
-        print(f"Graph saved as {graph_title}")
-    else:
-        plt.show(dpi=400)
+        plot_table(mu, sigma, percentiles, COLOURS[:len(mu)], titles)
+
+        plt.tight_layout()
+
+        if SHOULD_SAVE:
+                graph_title = "graphs/" + grand_title.replace(" ", "_").replace("\n", "_")
+                plt.savefig(graph_title, dpi=400, bbox_inches='tight')
+                print(f"Graph saved as {graph_title}")
+        else:
+            plt.show(dpi=400)
